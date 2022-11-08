@@ -3,22 +3,23 @@
 #include <string>
 #include <filesystem>
 #include <regex>
-#include <cassert>
 
 namespace fs = std::filesystem;
 
-const auto pattern_LogFileName = R"(\w+\.log)"; // Регулярка для поиска только логов
+std::string pattern_LogFileName = R"(\w+\.log)"; // Регулярка для поиска только логов
 //const auto pattern_LogFileName = R"(\w+(\.log|\.txt))"; // Регулярка для поиска логов и txt файлов
 //const auto pattern_LogFileName = R"(\w+\.log(.txt)"; // Регулярка для проверки на ошибки и ловлю исключений
 
-void descriptionRegexError(const std::regex_error& e);
+std::string pattern_StringFilter = R"(.*([Ee][Rr][Rr][Oo][Rr]).*)"; // Регулярка для поиска определенных строк
 
-char is_LogFile_RE(std::string FileName, std::string_view rg)
+void descriptionRegexError(const std::regex_error& e, std::string with, std::string where);
+
+char is_LogFile_RE(std::string FileName)
 {
     char result;
     try
     {
-        std::regex r(rg.data());
+        std::regex r(pattern_LogFileName);
         if (regex_match(FileName, r))
             result = 'y';
         else
@@ -27,21 +28,51 @@ char is_LogFile_RE(std::string FileName, std::string_view rg)
     }
     catch (const std::regex_error& e)
     {
-        descriptionRegexError(e);
+        descriptionRegexError(e, pattern_LogFileName, "is_LogFile_RE()");
         return result = 'e';
     }
 }
 
-void openThisFile(std::string path)
+char is_NecessaryString_RE(std::string line)
+{
+    char result;
+    try
+    {
+        std::regex r(pattern_StringFilter);
+        if (regex_match(line, r))
+            result = 'y';
+        else
+            result = 'n';
+        return result;
+    }
+    catch (const std::regex_error& e)
+    {
+        descriptionRegexError(e, pattern_StringFilter, "is_LogFile_RE()");
+        return result = 'e';
+    }
+}
+
+void openFileAndSearch(std::string path)
 {
     std::ifstream inputFile(path);
+    int Kcount = 0;
     if (inputFile.is_open())
     {
+        std::list<std::string> SearchedLines;
         std::string textFromFile;
         while (getline(inputFile, textFromFile))
         {
             //std::cout << textFromFile << std::endl;
-
+            char isNesString = is_NecessaryString_RE(textFromFile);
+            if (isNesString == 'y')
+            {
+                Kcount++;
+                std::cout << Kcount << " Finded line: " << textFromFile << std::endl;
+            }
+            else if (isNesString == 'e')
+            {
+                exit(EXIT_FAILURE);
+            }
         }
         inputFile.close();
     }
@@ -64,12 +95,11 @@ int main()
             fs::path CurrentPath = PathWithFileName->path();
             if (fs::is_regular_file(fs::status(CurrentPath))) // Проверяем, что итератор является именно файлом 
             {
-                char isLogFile = is_LogFile_RE(CurrentPath.filename().string(), pattern_LogFileName); //Проверяем что файл имеет определенный тип по регулярному выражению (pattern_LogFileName)
+                char isLogFile = is_LogFile_RE(CurrentPath.filename().string()); //Проверяем что файл имеет определенный тип по регулярному выражению (pattern_LogFileName)
                 if (isLogFile == 'y')
                 {
                     std::cout << CurrentPath.string() << " is a LOG file\n";
-
-                    openThisFile(CurrentPath.string());
+                    openFileAndSearch(CurrentPath.string());
                 }
                 else if (isLogFile == 'e')
                 {
@@ -84,14 +114,14 @@ int main()
     }
     else
     {
-        openThisFile(path);
+        openFileAndSearch(path);
     }
     return 0;
 }
 
-void descriptionRegexError(const std::regex_error& e)
+void descriptionRegexError(const std::regex_error& e, std::string with, std::string where)
 {
-    std::cerr << "std::regex`s error: " << e.what() << std::endl;
+    std::cerr << "std::regex`s error in (" << where << "), with \"" << with << "\": " << e.what() << std::endl;
 
     if (e.code() == std::regex_constants::error_collate)
         std::cerr << "the expression contains an invalid collating element name\n";
