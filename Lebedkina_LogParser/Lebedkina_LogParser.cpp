@@ -6,11 +6,11 @@
 
 namespace fs = std::filesystem;
 
-std::string pattern_LogFileName = R"(\w+\.log)"; // Регулярка для поиска только логов
+std::string pattern_LogFileName = R"(\w+\.log)"; // Регулярка для поиска только лог-файлов
 //const auto pattern_LogFileName = R"(\w+(\.log|\.txt))"; // Регулярка для поиска логов и txt файлов
 //const auto pattern_LogFileName = R"(\w+\.log(.txt)"; // Регулярка для проверки на ошибки и ловлю исключений
 
-std::string pattern_StringFilter = R"(.*([Ee][Rr][Rr][Oo][Rr]).*)"; // Регулярка для поиска определенных строк
+std::string pattern_StringFilter = R"(.*([Ee][Rr][Rr][Oo][Rr]).*)"; // Регулярка для поиска определенных строк (строк, содержащих слово error в независимости от регистра)
 
 void descriptionRegexError(const std::regex_error& e, std::string with, std::string where);
 
@@ -47,37 +47,42 @@ char is_NecessaryString_RE(std::string line)
     }
     catch (const std::regex_error& e)
     {
-        descriptionRegexError(e, pattern_StringFilter, "is_LogFile_RE()");
+        descriptionRegexError(e, pattern_StringFilter, "is_NecessaryString_RE()");
         return result = 'e';
     }
 }
-
 void openFileAndSearch(std::string path)
 {
+    std::cout << "Trying to open the file: " << path << std::endl;
     std::ifstream inputFile(path);
-    int Kcount = 0;
+    int countOfFindedLines = 0;
     if (inputFile.is_open())
     {
+        std::cout << "The file (" << path << ") was opened successfully\n";
+        std::ofstream outFile("ParserResult.txt", std::ios::app);
+        outFile << "All finded lines in file: (" << path << "):\n";
         std::list<std::string> SearchedLines;
         std::string textFromFile;
+        std::cout << "Start searching for strings\n";
         while (getline(inputFile, textFromFile))
         {
-            //std::cout << textFromFile << std::endl;
             char isNesString = is_NecessaryString_RE(textFromFile);
             if (isNesString == 'y')
             {
-                Kcount++;
-                std::cout << Kcount << " Finded line: " << textFromFile << std::endl;
+                countOfFindedLines++;
+                std::cout << "Finded: " << countOfFindedLines << " lines\n";
+                outFile << " " << countOfFindedLines << " finded line: " << textFromFile << std::endl;
             }
             else if (isNesString == 'e')
             {
                 exit(EXIT_FAILURE);
             }
         }
+        outFile.close();
         inputFile.close();
     }
     else
-        std::cout << "It seems that your input:\"" << path << "\" does not look like a directory or file path, please try again\n";
+        std::cout << "Failed to open the file: " << path << std::endl;
 }
 
 int main()
@@ -87,9 +92,11 @@ int main()
     std::string path = "";
     std::getline(std::cin, path);
 
+    std::ofstream outFile("ParserResult.txt");
+    outFile.close();
     if (fs::is_directory(fs::status(path))) // Проверяем что в конце ссылки действителньо существующая директория
     {
-        std::cout << "It is a directory\n"; //----------------
+        std::cout << "It is a directory\n";
         for (fs::directory_iterator PathWithFileName = fs::directory_iterator(path); PathWithFileName != fs::directory_iterator(); ++PathWithFileName) // Проходим по директории в поиске файлов
         {
             fs::path CurrentPath = PathWithFileName->path();
@@ -100,6 +107,7 @@ int main()
                 {
                     std::cout << CurrentPath.string() << " is a LOG file\n";
                     openFileAndSearch(CurrentPath.string());
+                    std::cout << "The search in the file (" << path << ") is over\n";
                 }
                 else if (isLogFile == 'e')
                 {
@@ -111,10 +119,12 @@ int main()
                 }
             }
         }
+        std::cout << "The search in the directory is over\n";
     }
     else
     {
         openFileAndSearch(path);
+        std::cout << "The search is over\n";
     }
     return 0;
 }

@@ -1,0 +1,99 @@
+All finded lines in file: (C:\Users\Tianwen\Desktop\DirWithLogs\log.log):
+ 1 finded line:   LogInit: Display: Warning/Error Summary (Unique only)
+ 2 finded line:   LogInit: Display: Success - 0 error(s), 7613 warning(s)
+ 3 finded line: Possible candidates for Unreal.SampleTest: UE4Game.DefaultTest UE4Game.ElementalDemoTest UE4Game.FortGPUTestbedPerfTest EpicGame.EpicGameTestNode EditorTest.BootTest EditorTest.EditorTestNode Gauntlet.BaseTest Gauntlet.ITestNode Gauntlet.UnrealTestNode`1[TConfigClass] Gauntlet.PGONode`1[TConfigClass] Gauntlet.UnrealTest.ErrorTestBase Gauntlet.UnrealTest.ErrorTestEnsure Gauntlet.UnrealTest.ErrorTestCheck Gauntlet.UnrealTest.ErrorTestFatal Gauntlet.UnrealTest.ErrorTestGPF Gauntlet.SelfTest.TestUnrealBuildParsing Gauntlet.SelfTest.TestAutoParam Gauntlet.SelfTest.TestParamParsing Gauntlet.SelfTest.Blank Gauntlet.SelfTest.CreateGif Gauntlet.SelfTest.OrderOfOpsTest Gauntlet.SelfTest.TestTargetDevice Gauntlet.SelfTest.TestUnrealLogParserBase Gauntlet.SelfTest.LogParserTestGauntletExitSuccess Gauntlet.SelfTest.LogParserTestEnsure Gauntlet.SelfTest.LogParserTestAssert Gauntlet.SelfTest.LogParserTestFatalError Gauntlet.SelfTest.LogParserTestException Gauntlet.SelfTest.LogParserTestRequestExit Gauntlet.SelfTest.LogParserTestChannels Gauntlet.SelfTest.LogParserTestWarnings Gauntlet.SelfTest.LogParserTestErrors Gauntlet.SelfTest.LogParserPerfSummary Gauntlet.SelfTest.TestOrionShortSoloGame Gauntlet.SelfTest.TestUnrealInstallAndRunBase Gauntlet.SelfTest.TestUnrealSession Gauntlet.SelfTest.TestUnrealOptions Gauntlet.SelfTest.TestUnrealBase Gauntlet.SelfTest.TestUnrealBuildSource Gauntlet.SelfTest.BaseTestNode Gauntlet.SelfTest.TestTargetDeviceMac Gauntlet.SelfTest.TestUnrealInstallThenRunMac Gauntlet.SelfTest.TestTargetDeviceWindows Gauntlet.Automation.Unreal.SampleTest
+ 4 finded line: Possible candidates for Unreal.SampleTest: UE4Game.DefaultTest UE4Game.ElementalDemoTest UE4Game.FortGPUTestbedPerfTest EpicGame.EpicGameTestNode EditorTest.BootTest EditorTest.EditorTestNode Gauntlet.BaseTest Gauntlet.ITestNode Gauntlet.UnrealTestNode`1[TConfigClass] Gauntlet.PGONode`1[TConfigClass] Gauntlet.UnrealTest.ErrorTestBase Gauntlet.UnrealTest.ErrorTestEnsure Gauntlet.UnrealTest.ErrorTestCheck Gauntlet.UnrealTest.ErrorTestFatal Gauntlet.UnrealTest.ErrorTestGPF Gauntlet.SelfTest.TestUnrealBuildParsing Gauntlet.SelfTest.TestAutoParam Gauntlet.SelfTest.TestParamParsing Gauntlet.SelfTest.Blank Gauntlet.SelfTest.CreateGif Gauntlet.SelfTest.OrderOfOpsTest Gauntlet.SelfTest.TestTargetDevice Gauntlet.SelfTest.TestUnrealLogParserBase Gauntlet.SelfTest.LogParserTestGauntletExitSuccess Gauntlet.SelfTest.LogParserTestEnsure Gauntlet.SelfTest.LogParserTestAssert Gauntlet.SelfTest.LogParserTestFatalError Gauntlet.SelfTest.LogParserTestException Gauntlet.SelfTest.LogParserTestRequestExit Gauntlet.SelfTest.LogParserTestChannels Gauntlet.SelfTest.LogParserTestWarnings Gauntlet.SelfTest.LogParserTestErrors Gauntlet.SelfTest.LogParserPerfSummary Gauntlet.SelfTest.TestOrionShortSoloGame Gauntlet.SelfTest.TestUnrealInstallAndRunBase Gauntlet.SelfTest.TestUnrealSession Gauntlet.SelfTest.TestUnrealOptions Gauntlet.SelfTest.TestUnrealBase Gauntlet.SelfTest.TestUnrealBuildSource Gauntlet.SelfTest.BaseTestNode Gauntlet.SelfTest.TestTargetDeviceMac Gauntlet.SelfTest.TestUnrealInstallThenRunMac Gauntlet.SelfTest.TestTargetDeviceWindows Gauntlet.Automation.Unreal.SampleTest
+ 5 finded line: Possible candidates for Unreal.SampleTest: UE4Game.DefaultTest UE4Game.ElementalDemoTest UE4Game.FortGPUTestbedPerfTest EpicGame.EpicGameTestNode EditorTest.BootTest EditorTest.EditorTestNode Gauntlet.BaseTest Gauntlet.ITestNode Gauntlet.UnrealTestNode`1[TConfigClass] Gauntlet.PGONode`1[TConfigClass] Gauntlet.UnrealTest.ErrorTestBase Gauntlet.UnrealTest.ErrorTestEnsure Gauntlet.UnrealTest.ErrorTestCheck Gauntlet.UnrealTest.ErrorTestFatal Gauntlet.UnrealTest.ErrorTestGPF Gauntlet.SelfTest.TestUnrealBuildParsing Gauntlet.SelfTest.TestAutoParam Gauntlet.SelfTest.TestParamParsing Gauntlet.SelfTest.Blank Gauntlet.SelfTest.CreateGif Gauntlet.SelfTest.OrderOfOpsTest Gauntlet.SelfTest.TestTargetDevice Gauntlet.SelfTest.TestUnrealLogParserBase Gauntlet.SelfTest.LogParserTestGauntletExitSuccess Gauntlet.SelfTest.LogParserTestEnsure Gauntlet.SelfTest.LogParserTestAssert Gauntlet.SelfTest.LogParserTestFatalError Gauntlet.SelfTest.LogParserTestException Gauntlet.SelfTest.LogParserTestRequestExit Gauntlet.SelfTest.LogParserTestChannels Gauntlet.SelfTest.LogParserTestWarnings Gauntlet.SelfTest.LogParserTestErrors Gauntlet.SelfTest.LogParserPerfSummary Gauntlet.SelfTest.TestOrionShortSoloGame Gauntlet.SelfTest.TestUnrealInstallAndRunBase Gauntlet.SelfTest.TestUnrealSession Gauntlet.SelfTest.TestUnrealOptions Gauntlet.SelfTest.TestUnrealBase Gauntlet.SelfTest.TestUnrealBuildSource Gauntlet.SelfTest.BaseTestNode Gauntlet.SelfTest.TestTargetDeviceMac Gauntlet.SelfTest.TestUnrealInstallThenRunMac Gauntlet.SelfTest.TestTargetDeviceWindows Gauntlet.Automation.Unreal.SampleTest
+ 6 finded line: Possible candidates for Unreal.SampleTest: UE4Game.DefaultTest UE4Game.ElementalDemoTest UE4Game.FortGPUTestbedPerfTest EpicGame.EpicGameTestNode EditorTest.BootTest EditorTest.EditorTestNode Gauntlet.BaseTest Gauntlet.ITestNode Gauntlet.UnrealTestNode`1[TConfigClass] Gauntlet.PGONode`1[TConfigClass] Gauntlet.UnrealTest.ErrorTestBase Gauntlet.UnrealTest.ErrorTestEnsure Gauntlet.UnrealTest.ErrorTestCheck Gauntlet.UnrealTest.ErrorTestFatal Gauntlet.UnrealTest.ErrorTestGPF Gauntlet.SelfTest.TestUnrealBuildParsing Gauntlet.SelfTest.TestAutoParam Gauntlet.SelfTest.TestParamParsing Gauntlet.SelfTest.Blank Gauntlet.SelfTest.CreateGif Gauntlet.SelfTest.OrderOfOpsTest Gauntlet.SelfTest.TestTargetDevice Gauntlet.SelfTest.TestUnrealLogParserBase Gauntlet.SelfTest.LogParserTestGauntletExitSuccess Gauntlet.SelfTest.LogParserTestEnsure Gauntlet.SelfTest.LogParserTestAssert Gauntlet.SelfTest.LogParserTestFatalError Gauntlet.SelfTest.LogParserTestException Gauntlet.SelfTest.LogParserTestRequestExit Gauntlet.SelfTest.LogParserTestChannels Gauntlet.SelfTest.LogParserTestWarnings Gauntlet.SelfTest.LogParserTestErrors Gauntlet.SelfTest.LogParserPerfSummary Gauntlet.SelfTest.TestOrionShortSoloGame Gauntlet.SelfTest.TestUnrealInstallAndRunBase Gauntlet.SelfTest.TestUnrealSession Gauntlet.SelfTest.TestUnrealOptions Gauntlet.SelfTest.TestUnrealBase Gauntlet.SelfTest.TestUnrealBuildSource Gauntlet.SelfTest.BaseTestNode Gauntlet.SelfTest.TestTargetDeviceMac Gauntlet.SelfTest.TestUnrealInstallThenRunMac Gauntlet.SelfTest.TestTargetDeviceWindows Gauntlet.Automation.Unreal.SampleTest
+ 7 finded line: Possible candidates for Unreal.SampleTest: UE4Game.DefaultTest UE4Game.ElementalDemoTest UE4Game.FortGPUTestbedPerfTest EpicGame.EpicGameTestNode EditorTest.BootTest EditorTest.EditorTestNode Gauntlet.BaseTest Gauntlet.ITestNode Gauntlet.UnrealTestNode`1[TConfigClass] Gauntlet.PGONode`1[TConfigClass] Gauntlet.UnrealTest.ErrorTestBase Gauntlet.UnrealTest.ErrorTestEnsure Gauntlet.UnrealTest.ErrorTestCheck Gauntlet.UnrealTest.ErrorTestFatal Gauntlet.UnrealTest.ErrorTestGPF Gauntlet.SelfTest.TestUnrealBuildParsing Gauntlet.SelfTest.TestAutoParam Gauntlet.SelfTest.TestParamParsing Gauntlet.SelfTest.Blank Gauntlet.SelfTest.CreateGif Gauntlet.SelfTest.OrderOfOpsTest Gauntlet.SelfTest.TestTargetDevice Gauntlet.SelfTest.TestUnrealLogParserBase Gauntlet.SelfTest.LogParserTestGauntletExitSuccess Gauntlet.SelfTest.LogParserTestEnsure Gauntlet.SelfTest.LogParserTestAssert Gauntlet.SelfTest.LogParserTestFatalError Gauntlet.SelfTest.LogParserTestException Gauntlet.SelfTest.LogParserTestRequestExit Gauntlet.SelfTest.LogParserTestChannels Gauntlet.SelfTest.LogParserTestWarnings Gauntlet.SelfTest.LogParserTestErrors Gauntlet.SelfTest.LogParserPerfSummary Gauntlet.SelfTest.TestOrionShortSoloGame Gauntlet.SelfTest.TestUnrealInstallAndRunBase Gauntlet.SelfTest.TestUnrealSession Gauntlet.SelfTest.TestUnrealOptions Gauntlet.SelfTest.TestUnrealBase Gauntlet.SelfTest.TestUnrealBuildSource Gauntlet.SelfTest.BaseTestNode Gauntlet.SelfTest.TestTargetDeviceMac Gauntlet.SelfTest.TestUnrealInstallThenRunMac Gauntlet.SelfTest.TestTargetDeviceWindows Gauntlet.Automation.Unreal.SampleTest
+ 8 finded line: Possible candidates for Unreal.SampleTest: UE4Game.DefaultTest UE4Game.ElementalDemoTest UE4Game.FortGPUTestbedPerfTest EpicGame.EpicGameTestNode EditorTest.BootTest EditorTest.EditorTestNode Gauntlet.BaseTest Gauntlet.ITestNode Gauntlet.UnrealTestNode`1[TConfigClass] Gauntlet.PGONode`1[TConfigClass] Gauntlet.UnrealTest.ErrorTestBase Gauntlet.UnrealTest.ErrorTestEnsure Gauntlet.UnrealTest.ErrorTestCheck Gauntlet.UnrealTest.ErrorTestFatal Gauntlet.UnrealTest.ErrorTestGPF Gauntlet.SelfTest.TestUnrealBuildParsing Gauntlet.SelfTest.TestAutoParam Gauntlet.SelfTest.TestParamParsing Gauntlet.SelfTest.Blank Gauntlet.SelfTest.CreateGif Gauntlet.SelfTest.OrderOfOpsTest Gauntlet.SelfTest.TestTargetDevice Gauntlet.SelfTest.TestUnrealLogParserBase Gauntlet.SelfTest.LogParserTestGauntletExitSuccess Gauntlet.SelfTest.LogParserTestEnsure Gauntlet.SelfTest.LogParserTestAssert Gauntlet.SelfTest.LogParserTestFatalError Gauntlet.SelfTest.LogParserTestException Gauntlet.SelfTest.LogParserTestRequestExit Gauntlet.SelfTest.LogParserTestChannels Gauntlet.SelfTest.LogParserTestWarnings Gauntlet.SelfTest.LogParserTestErrors Gauntlet.SelfTest.LogParserPerfSummary Gauntlet.SelfTest.TestOrionShortSoloGame Gauntlet.SelfTest.TestUnrealInstallAndRunBase Gauntlet.SelfTest.TestUnrealSession Gauntlet.SelfTest.TestUnrealOptions Gauntlet.SelfTest.TestUnrealBase Gauntlet.SelfTest.TestUnrealBuildSource Gauntlet.SelfTest.BaseTestNode Gauntlet.SelfTest.TestTargetDeviceMac Gauntlet.SelfTest.TestUnrealInstallThenRunMac Gauntlet.SelfTest.TestTargetDeviceWindows Gauntlet.Automation.Unreal.SampleTest
+ 9 finded line: Possible candidates for Unreal.SampleTest: UE4Game.DefaultTest UE4Game.ElementalDemoTest UE4Game.FortGPUTestbedPerfTest EpicGame.EpicGameTestNode EditorTest.BootTest EditorTest.EditorTestNode Gauntlet.BaseTest Gauntlet.ITestNode Gauntlet.UnrealTestNode`1[TConfigClass] Gauntlet.PGONode`1[TConfigClass] Gauntlet.UnrealTest.ErrorTestBase Gauntlet.UnrealTest.ErrorTestEnsure Gauntlet.UnrealTest.ErrorTestCheck Gauntlet.UnrealTest.ErrorTestFatal Gauntlet.UnrealTest.ErrorTestGPF Gauntlet.SelfTest.TestUnrealBuildParsing Gauntlet.SelfTest.TestAutoParam Gauntlet.SelfTest.TestParamParsing Gauntlet.SelfTest.Blank Gauntlet.SelfTest.CreateGif Gauntlet.SelfTest.OrderOfOpsTest Gauntlet.SelfTest.TestTargetDevice Gauntlet.SelfTest.TestUnrealLogParserBase Gauntlet.SelfTest.LogParserTestGauntletExitSuccess Gauntlet.SelfTest.LogParserTestEnsure Gauntlet.SelfTest.LogParserTestAssert Gauntlet.SelfTest.LogParserTestFatalError Gauntlet.SelfTest.LogParserTestException Gauntlet.SelfTest.LogParserTestRequestExit Gauntlet.SelfTest.LogParserTestChannels Gauntlet.SelfTest.LogParserTestWarnings Gauntlet.SelfTest.LogParserTestErrors Gauntlet.SelfTest.LogParserPerfSummary Gauntlet.SelfTest.TestOrionShortSoloGame Gauntlet.SelfTest.TestUnrealInstallAndRunBase Gauntlet.SelfTest.TestUnrealSession Gauntlet.SelfTest.TestUnrealOptions Gauntlet.SelfTest.TestUnrealBase Gauntlet.SelfTest.TestUnrealBuildSource Gauntlet.SelfTest.BaseTestNode Gauntlet.SelfTest.TestTargetDeviceMac Gauntlet.SelfTest.TestUnrealInstallThenRunMac Gauntlet.SelfTest.TestTargetDeviceWindows Gauntlet.Automation.Unreal.SampleTest
+ 10 finded line: Possible candidates for Unreal.SampleTest: UE4Game.DefaultTest UE4Game.ElementalDemoTest UE4Game.FortGPUTestbedPerfTest EpicGame.EpicGameTestNode EditorTest.BootTest EditorTest.EditorTestNode Gauntlet.BaseTest Gauntlet.ITestNode Gauntlet.UnrealTestNode`1[TConfigClass] Gauntlet.PGONode`1[TConfigClass] Gauntlet.UnrealTest.ErrorTestBase Gauntlet.UnrealTest.ErrorTestEnsure Gauntlet.UnrealTest.ErrorTestCheck Gauntlet.UnrealTest.ErrorTestFatal Gauntlet.UnrealTest.ErrorTestGPF Gauntlet.SelfTest.TestUnrealBuildParsing Gauntlet.SelfTest.TestAutoParam Gauntlet.SelfTest.TestParamParsing Gauntlet.SelfTest.Blank Gauntlet.SelfTest.CreateGif Gauntlet.SelfTest.OrderOfOpsTest Gauntlet.SelfTest.TestTargetDevice Gauntlet.SelfTest.TestUnrealLogParserBase Gauntlet.SelfTest.LogParserTestGauntletExitSuccess Gauntlet.SelfTest.LogParserTestEnsure Gauntlet.SelfTest.LogParserTestAssert Gauntlet.SelfTest.LogParserTestFatalError Gauntlet.SelfTest.LogParserTestException Gauntlet.SelfTest.LogParserTestRequestExit Gauntlet.SelfTest.LogParserTestChannels Gauntlet.SelfTest.LogParserTestWarnings Gauntlet.SelfTest.LogParserTestErrors Gauntlet.SelfTest.LogParserPerfSummary Gauntlet.SelfTest.TestOrionShortSoloGame Gauntlet.SelfTest.TestUnrealInstallAndRunBase Gauntlet.SelfTest.TestUnrealSession Gauntlet.SelfTest.TestUnrealOptions Gauntlet.SelfTest.TestUnrealBase Gauntlet.SelfTest.TestUnrealBuildSource Gauntlet.SelfTest.BaseTestNode Gauntlet.SelfTest.TestTargetDeviceMac Gauntlet.SelfTest.TestUnrealInstallThenRunMac Gauntlet.SelfTest.TestTargetDeviceWindows Gauntlet.Automation.Unreal.SampleTest
+ 11 finded line: Possible candidates for Unreal.SampleTest: UE4Game.DefaultTest UE4Game.ElementalDemoTest UE4Game.FortGPUTestbedPerfTest EpicGame.EpicGameTestNode EditorTest.BootTest EditorTest.EditorTestNode Gauntlet.BaseTest Gauntlet.ITestNode Gauntlet.UnrealTestNode`1[TConfigClass] Gauntlet.PGONode`1[TConfigClass] Gauntlet.UnrealTest.ErrorTestBase Gauntlet.UnrealTest.ErrorTestEnsure Gauntlet.UnrealTest.ErrorTestCheck Gauntlet.UnrealTest.ErrorTestFatal Gauntlet.UnrealTest.ErrorTestGPF Gauntlet.SelfTest.TestUnrealBuildParsing Gauntlet.SelfTest.TestAutoParam Gauntlet.SelfTest.TestParamParsing Gauntlet.SelfTest.Blank Gauntlet.SelfTest.CreateGif Gauntlet.SelfTest.OrderOfOpsTest Gauntlet.SelfTest.TestTargetDevice Gauntlet.SelfTest.TestUnrealLogParserBase Gauntlet.SelfTest.LogParserTestGauntletExitSuccess Gauntlet.SelfTest.LogParserTestEnsure Gauntlet.SelfTest.LogParserTestAssert Gauntlet.SelfTest.LogParserTestFatalError Gauntlet.SelfTest.LogParserTestException Gauntlet.SelfTest.LogParserTestRequestExit Gauntlet.SelfTest.LogParserTestChannels Gauntlet.SelfTest.LogParserTestWarnings Gauntlet.SelfTest.LogParserTestErrors Gauntlet.SelfTest.LogParserPerfSummary Gauntlet.SelfTest.TestOrionShortSoloGame Gauntlet.SelfTest.TestUnrealInstallAndRunBase Gauntlet.SelfTest.TestUnrealSession Gauntlet.SelfTest.TestUnrealOptions Gauntlet.SelfTest.TestUnrealBase Gauntlet.SelfTest.TestUnrealBuildSource Gauntlet.SelfTest.BaseTestNode Gauntlet.SelfTest.TestTargetDeviceMac Gauntlet.SelfTest.TestUnrealInstallThenRunMac Gauntlet.SelfTest.TestTargetDeviceWindows Gauntlet.Automation.Unreal.SampleTest
+ 12 finded line: Error:
+ 13 finded line: Error:
+ 14 finded line: Error:
+ 15 finded line: Error:
+ 16 finded line: Error:
+ 17 finded line: Error:
+ 18 finded line: Possible candidates for Unreal.SampleTest: UE4Game.DefaultTest UE4Game.ElementalDemoTest UE4Game.FortGPUTestbedPerfTest EpicGame.EpicGameTestNode EditorTest.BootTest EditorTest.EditorTestNode Gauntlet.BaseTest Gauntlet.ITestNode Gauntlet.UnrealTestNode`1[TConfigClass] Gauntlet.PGONode`1[TConfigClass] Gauntlet.UnrealTest.ErrorTestBase Gauntlet.UnrealTest.ErrorTestEnsure Gauntlet.UnrealTest.ErrorTestCheck Gauntlet.UnrealTest.ErrorTestFatal Gauntlet.UnrealTest.ErrorTestGPF Gauntlet.SelfTest.TestUnrealBuildParsing Gauntlet.SelfTest.TestAutoParam Gauntlet.SelfTest.TestParamParsing Gauntlet.SelfTest.Blank Gauntlet.SelfTest.CreateGif Gauntlet.SelfTest.OrderOfOpsTest Gauntlet.SelfTest.TestTargetDevice Gauntlet.SelfTest.TestUnrealLogParserBase Gauntlet.SelfTest.LogParserTestGauntletExitSuccess Gauntlet.SelfTest.LogParserTestEnsure Gauntlet.SelfTest.LogParserTestAssert Gauntlet.SelfTest.LogParserTestFatalError Gauntlet.SelfTest.LogParserTestException Gauntlet.SelfTest.LogParserTestRequestExit Gauntlet.SelfTest.LogParserTestChannels Gauntlet.SelfTest.LogParserTestWarnings Gauntlet.SelfTest.LogParserTestErrors Gauntlet.SelfTest.LogParserPerfSummary Gauntlet.SelfTest.TestOrionShortSoloGame Gauntlet.SelfTest.TestUnrealInstallAndRunBase Gauntlet.SelfTest.TestUnrealSession Gauntlet.SelfTest.TestUnrealOptions Gauntlet.SelfTest.TestUnrealBase Gauntlet.SelfTest.TestUnrealBuildSource Gauntlet.SelfTest.BaseTestNode Gauntlet.SelfTest.TestTargetDeviceMac Gauntlet.SelfTest.TestUnrealInstallThenRunMac Gauntlet.SelfTest.TestTargetDeviceWindows Gauntlet.Automation.Unreal.SampleTest
+ 19 finded line: Error:
+ 20 finded line: Error:
+ 21 finded line: Error:
+ 22 finded line: Error:
+ 23 finded line: Error:
+ 24 finded line: Error:
+ 25 finded line: Error:
+ 26 finded line: Error:
+ 27 finded line: Error:
+ 28 finded line: Error:
+ 29 finded line: Error: Automation RunTests BP_TestTest
+ 30 finded line: Error:
+ 31 finded line: Error:
+ 32 finded line: Error:
+ 33 finded line: Error:
+ 34 finded line: Error:
+ 35 finded line: Error: Automation RunTests BP_TestTest
+ 36 finded line: Error:
+ 37 finded line: Error:
+ 38 finded line: Error: Automation RunTests BP_TestTest
+ 39 finded line: Error:
+ 40 finded line: Error:
+ 41 finded line: Error:
+ 42 finded line: Error:
+ 43 finded line: Error: Test Gauntlet.Automation.Unreal.SampleTest threw an exception during launch. Skipping test. Ex: Последовательность не содержит элементов
+ 44 finded line: Error: Test Gauntlet.Automation.Unreal.SampleTest (Win64 Development Client) failed to start
+ 45 finded line: Error: Gauntlet.Automation.Unreal.SampleTest (Win64 Development Client) result=Invalid
+ 46 finded line: AutomationTool exiting with ExitCode=152 (Error_TestFailure)
+ 47 finded line: Error:
+ 48 finded line: Error: Automation RunTests BP_TestTest
+ 49 finded line: Error:
+ 50 finded line: Error:
+ 51 finded line: Error:
+ 52 finded line: Error:
+ 53 finded line: Error:
+ 54 finded line: Error: Automation RunTests BP_TestTest
+ 55 finded line: Error:
+ 56 finded line: Error:
+ 57 finded line: Error:
+ 58 finded line: Error:
+ 59 finded line: Error:
+ 60 finded line: Error: Automation RunTests BP_TestTest
+ 61 finded line: Error:
+ 62 finded line: Error:
+ 63 finded line: Error:
+ 64 finded line: Error:
+ 65 finded line:   FatalErrors: 0, Ensures: 1, Errors: 31, Warnings: 855
+ 66 finded line:   ##### Result: Reason=Process requested exit with no fatal errors, Code=0
+ 67 finded line:   FatalErrors: 0, Ensures: 1, Errors: 31, Warnings: 855, Hash: 7F30687649907788BEEDA4500AC8C562
+ 68 finded line: Error:
+ 69 finded line: Error: Automation RunTests BP_TestTest
+ 70 finded line: Error:
+ 71 finded line: Error:
+ 72 finded line: Error:
+ 73 finded line: Error:
+ 74 finded line: Error: Test Gauntlet.Automation.Unreal.SampleTest threw an exception during launch. Skipping test. Ex: Последовательность не содержит элементов
+ 75 finded line: Error: Test Gauntlet.Automation.Unreal.SampleTest (Win64 Development Client) failed to start
+ 76 finded line: Error: Gauntlet.Automation.Unreal.SampleTest (Win64 Development Client) result=Invalid
+ 77 finded line: AutomationTool exiting with ExitCode=152 (Error_TestFailure)
+ 78 finded line: Error:
+ 79 finded line: Error: Automation RunTests BP_TestTest
+ 80 finded line: Error:
+ 81 finded line: Error:
+ 82 finded line: Error:
+ 83 finded line: Error:
+ 84 finded line: Error:
+ 85 finded line: Error: Automation RunTests BP_TestTest
+ 86 finded line: Error:
+ 87 finded line: Error:
+ 88 finded line: Error:
+ 89 finded line: Error:
+ 90 finded line:   FatalErrors: 0, Ensures: 2, Errors: 53, Warnings: 161
+ 91 finded line:   ##### Result: Reason=Process requested exit with no fatal errors, Code=0
+ 92 finded line:   FatalErrors: 0, Ensures: 2, Errors: 53, Warnings: 161, Hash: DE8C21D156E0B759FF4A6A277AD76117
+ 93 finded line: Error:
+ 94 finded line: Error: Automation RunTests BP_TestTest
+ 95 finded line: Error:
+ 96 finded line: Error:
+ 97 finded line: Error:
+ 98 finded line: Error:
