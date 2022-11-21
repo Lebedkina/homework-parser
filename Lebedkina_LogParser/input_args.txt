@@ -1,0 +1,3 @@
+\w+\.log
+.*([Ee][Rr][Rr][Oo][Rr]).*
+C:\Users\Tianwen\Desktop\DirWithLogs

@@ -6,51 +6,64 @@
 
 namespace fs = std::filesystem;
 
-std::string pattern_LogFileName = R"(\w+\.log)"; // Регулярка для поиска только лог-файлов
-//const auto pattern_LogFileName = R"(\w+(\.log|\.txt))"; // Регулярка для поиска логов и txt файлов
-//const auto pattern_LogFileName = R"(\w+\.log(.txt)"; // Регулярка для проверки на ошибки и ловлю исключений
+//--Объявление вводимых из файла значений
+std::string pattern_LogFileName = ""; // Регулярка для поиска только файлов определенного типа
+std::string pattern_StringFilter = ""; // Регулярка для поиска определенных строк
+std::string path = "";
+//--
 
-std::string pattern_StringFilter = R"(.*([Ee][Rr][Rr][Oo][Rr]).*)"; // Регулярка для поиска определенных строк (строк, содержащих слово error в независимости от регистра)
+std::string inputArgs_FName = "input_args.txt";
+std::string outResult_FName = "ParserResult.txt";
 
-void descriptionRegexError(const std::regex_error& e, std::string with, std::string where);
+void descriptionRegexError(const std::regex_error& e, const std::string& with);
 
-char is_LogFile_RE(std::string FileName)
+bool enterArgs(std::string& LogFName_regex, std::string& StrFilter_regex, std::string& pathToLogs)
 {
-    char result;
-    try
+    std::cout << "Reading the file "<< inputArgs_FName <<" to get initial arguments\n";
+    std::ifstream inputArgsFile(inputArgs_FName);
+    if (inputArgsFile.is_open())
     {
-        std::regex r(pattern_LogFileName);
-        if (regex_match(FileName, r))
-            result = 'y';
-        else
-            result = 'n';
-        return result;
+        short int counter = 0;
+        std::string lineFrFile = "";
+        while (getline(inputArgsFile, lineFrFile))
+        {
+            counter++;
+            if (counter == 1)
+                LogFName_regex = std::quoted(lineFrFile)._Str;
+            else if (counter == 2)
+                StrFilter_regex = std::quoted(lineFrFile)._Str;
+            else if (counter == 3) {
+                pathToLogs = std::quoted(lineFrFile)._Str;
+                break;
+            }
+        }
+        std::cout << "The file "<< inputArgs_FName <<" was successfully read\n";
+        inputArgsFile.close();
+        return true;
     }
-    catch (const std::regex_error& e)
+    else 
     {
-        descriptionRegexError(e, pattern_LogFileName, "is_LogFile_RE()");
-        return result = 'e';
+        std::cout << "Failed to open the file: "<< inputArgs_FName << std::endl;
+        return false;
     }
 }
 
-char is_NecessaryString_RE(std::string line)
+bool is_MatchesRegex(const std::string& varRegex, const std::string& inpString)
 {
-    char result;
     try
     {
-        std::regex r(pattern_StringFilter);
-        if (regex_match(line, r))
-            result = 'y';
+        std::regex r(varRegex);
+        if (regex_match(inpString, r))
+            return true;
         else
-            result = 'n';
-        return result;
+            return false;
     }
     catch (const std::regex_error& e)
     {
-        descriptionRegexError(e, pattern_StringFilter, "is_NecessaryString_RE()");
-        return result = 'e';
+        descriptionRegexError(e, varRegex);
     }
 }
+
 void openFileAndSearch(std::string path)
 {
     std::cout << "Trying to open the file: " << path << std::endl;
@@ -59,23 +72,18 @@ void openFileAndSearch(std::string path)
     if (inputFile.is_open())
     {
         std::cout << "The file (" << path << ") was opened successfully\n";
-        std::ofstream outFile("ParserResult.txt", std::ios::app);
+        std::ofstream outFile(outResult_FName, std::ios::app);
         outFile << "All finded lines in file: (" << path << "):\n";
         std::list<std::string> SearchedLines;
         std::string textFromFile;
         std::cout << "Start searching for strings\n";
         while (getline(inputFile, textFromFile))
         {
-            char isNesString = is_NecessaryString_RE(textFromFile);
-            if (isNesString == 'y')
+            if (is_MatchesRegex(pattern_StringFilter, textFromFile))
             {
                 countOfFindedLines++;
                 std::cout << "Finded: " << countOfFindedLines << " lines\n";
                 outFile << " " << countOfFindedLines << " finded line: " << textFromFile << std::endl;
-            }
-            else if (isNesString == 'e')
-            {
-                exit(EXIT_FAILURE);
             }
         }
         outFile.close();
@@ -87,51 +95,48 @@ void openFileAndSearch(std::string path)
 
 int main()
 {
-    std::cout << "Enter the path to the directory with the log file or to the log file itself\n";
-    std::cout << "Path: ";
-    std::string path = "";
-    std::getline(std::cin, path);
-
-    std::ofstream outFile("ParserResult.txt");
-    outFile.close();
-    if (fs::is_directory(fs::status(path))) // Проверяем что в конце ссылки действителньо существующая директория
+    if (enterArgs(pattern_LogFileName, pattern_StringFilter, path))
     {
-        std::cout << "It is a directory\n";
-        for (fs::directory_iterator PathWithFileName = fs::directory_iterator(path); PathWithFileName != fs::directory_iterator(); ++PathWithFileName) // Проходим по директории в поиске файлов
+        std::cout << "\nEntered arguments:\n";
+        std::cout << "Regex to search by file type: " << pattern_LogFileName << std::endl;
+        std::cout << "Regex to search for the required lines: " << pattern_StringFilter << std::endl;
+        std::cout << "Path to file: " << path << std::endl << std::endl;
+
+        std::ofstream outFile(outResult_FName); // Нужно чтобы в файле удалился прошлый результат и новые даннные данные записывались с начала
+        outFile.close();
+
+        if (fs::is_directory(fs::status(path))) // Проверяем что в конце ссылки действителньо существующая директория
         {
-            fs::path CurrentPath = PathWithFileName->path();
-            if (fs::is_regular_file(fs::status(CurrentPath))) // Проверяем, что итератор является именно файлом 
+            std::cout << "The entered path is the path to the directory\n";
+            for (fs::directory_iterator PathWithFileName = fs::directory_iterator(path); PathWithFileName != fs::directory_iterator(); ++PathWithFileName) // Проходим по директории в поиске файлов
             {
-                char isLogFile = is_LogFile_RE(CurrentPath.filename().string()); //Проверяем что файл имеет определенный тип по регулярному выражению (pattern_LogFileName)
-                if (isLogFile == 'y')
+                fs::path CurrentPath = PathWithFileName->path();
+                if (fs::is_regular_file(fs::status(CurrentPath))) // Проверяем, что итератор является именно файлом
                 {
-                    std::cout << CurrentPath.string() << " is a LOG file\n";
-                    openFileAndSearch(CurrentPath.string());
-                    std::cout << "The search in the file (" << path << ") is over\n";
-                }
-                else if (isLogFile == 'e')
-                {
-                    exit(EXIT_FAILURE);
-                }
-                else
-                {
-                    std::cout << CurrentPath.string() << " is just a file\n";
+                    if (is_MatchesRegex(pattern_LogFileName, CurrentPath.filename().string())) //Проверяем что файл имеет определенный тип по регулярному выражению (pattern_LogFileName)
+                    {
+                        std::cout << std::endl << CurrentPath.string() << " is a LOG file\n";
+                        openFileAndSearch(CurrentPath.string());
+                        std::cout << "The search in the file (" << path << ") is over\n";
+                    }
+                    else
+                        std::cout << CurrentPath.string() << " is just a file\n";
                 }
             }
+            std::cout << "The search in the directory is over\n";
         }
-        std::cout << "The search in the directory is over\n";
-    }
-    else
-    {
-        openFileAndSearch(path);
-        std::cout << "The search is over\n";
+        else
+        {
+            openFileAndSearch(path);
+            std::cout << "The search is over\n";
+        }
     }
     return 0;
 }
 
-void descriptionRegexError(const std::regex_error& e, std::string with, std::string where)
+void descriptionRegexError(const std::regex_error& e, const std::string& with)
 {
-    std::cerr << "std::regex`s error in (" << where << "), with \"" << with << "\": " << e.what() << std::endl;
+    std::cerr << "std::regex`s error with \"" << with << "\": " << e.what() << std::endl;
 
     if (e.code() == std::regex_constants::error_collate)
         std::cerr << "the expression contains an invalid collating element name\n";
@@ -167,4 +172,5 @@ void descriptionRegexError(const std::regex_error& e, std::string with, std::str
 
     else
         std::cerr << "std::regex`s unkown error\n";
+    exit(EXIT_FAILURE);
 }

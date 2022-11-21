@@ -97,3 +97,10 @@ All finded lines in file: (C:\Users\Tianwen\Desktop\DirWithLogs\log.log):
  96 finded line: Error:
  97 finded line: Error:
  98 finded line: Error:
+All finded lines in file: (C:\Users\Tianwen\Desktop\DirWithLogs\LogFile_1.log):
+All finded lines in file: (C:\Users\Tianwen\Desktop\DirWithLogs\LogFile_2.log):
+All finded lines in file: (C:\Users\Tianwen\Desktop\DirWithLogs\LogFile_3.log):
+ 1 finded line: AutomationTool exiting with ExitCode=152 (Error_TestFailure)
+ 2 finded line: Error:
+ 3 finded line: Error: Automation RunTests BP_TestTest
+ 4 finded line: Error:
